@@ -1,0 +1,10 @@
+.area {
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 240px;
+	padding: 5px;
+
+	box-shadow: 0 2px 4px rgb(0 0 0 / 6%), 0 4px 6px rgb(0 0 0 / 10%);
+	gap: 8px;
+}
