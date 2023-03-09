@@ -1,0 +1,23 @@
+.button {
+	padding: 5px;
+
+	cursor: pointer;
+	transition: all .3s linear;
+
+	border: 2px solid #E2E3E5;
+	border-radius: 6px;
+	background-color: transparent;
+
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.button:hover {
+	border-color: #5D5FEF;
+}
+
+.button:active {
+	color: #FFF;
+	border-color: #5D5FEF;
+	background-color: #5D5FEF;
+}
