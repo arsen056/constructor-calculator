@@ -1,0 +1,11 @@
+.runtime {
+	display: flex;
+	align-items: center;
+
+	max-width: 240px;
+	padding: 10px;
+
+	text-align: center;
+
+	border: 2px dashed #C4C4C4;
+}

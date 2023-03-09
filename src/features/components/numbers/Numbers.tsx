@@ -6,7 +6,7 @@ import s from './Numbers.module.css';
 
 export const Numbers = () => {
   return (
-    <Area>
+    <Area draggable={true}>
       <Button className={s.number}>7</Button>
       <Button className={s.number}>8</Button>
       <Button className={s.number}>9</Button>

@@ -5,6 +5,10 @@
 }
 
 .container {
+	display: flex;
+	justify-content: center;
+
 	width: 1280px;
 	margin: 50px auto;
+	column-gap: 50px;
 }
