@@ -1,7 +1,9 @@
+import { Constructor } from 'features/constructor';
+
 function App() {
   return (
-    <div className="App">
-      <h2>Hello</h2>
+    <div className="container">
+      <Constructor/>
     </div>
   );
 }
