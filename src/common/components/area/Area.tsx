@@ -2,8 +2,17 @@ import React, { ComponentProps, FC } from 'react';
 
 import s from './Area.module.css';
 
-export const Area:FC<ComponentProps<'div'>> = ({className, ...rest}) => {
+type Props = {
+  isRuntime?: boolean
+} & ComponentProps<'div'>
+
+export const Area:FC<Props> = ({className, isRuntime, ...rest}) => {
+
+  const isRuntimeArea = isRuntime ? '' : s.shadow;
+
+  const areaClassName = `${s.area} ${className} ` + isRuntimeArea;
+
   return (
-    <div className={`${s.area} ${className}`} {...rest}/>
+    <div className={areaClassName} {...rest}/>
   );
 };
