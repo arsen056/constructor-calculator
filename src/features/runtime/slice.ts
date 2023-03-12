@@ -1,23 +1,25 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { Operations } from 'features/components/operations';
-import { Numbers } from 'features/components/numbers';
-import { Equal } from 'features/components/equal';
-import { Display } from 'common/components/display';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+type ComponentType = {
+  id: number,
+  order: number,
+  component: () => JSX.Element
+}
 
-const initialState = [
-  {order: 1, component: () => Display},
-  {order: 1, component: () => Operations},
-  {order: 2, component: () => Numbers},
-  {order: 3, component: () => Equal}
+const initialState: ComponentType[] = [
+
 ];
 
 const slice = createSlice({
   name: 'runtime',
   initialState,
   reducers: {
-    
+    pushElement: (state, action: PayloadAction<ComponentType>) => {
+      state.push(action.payload);
+    }
   }
 });
+
+export const {pushElement} = slice.actions;
 
 export const runtimeReducer = slice.reducer;

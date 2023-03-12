@@ -1,16 +1,19 @@
 import React from 'react';
-import { Display } from 'common/components/display';
-import { Operations } from 'features/components/operations/';
-import { Numbers } from 'features/components/numbers';
-import { Equal } from 'features/components/equal';
+import { useSelector } from 'react-redux';
+import { selectConstructorComponents } from 'features/constructor/selectors';
 
 export const Constructor = () => {
+
+  const components = useSelector(selectConstructorComponents);
+
+  const componentsMap = components.map(c => {
+    const Component = c.component;
+    return <Component draggable={true} key={c.id} />;
+  });
+
   return (
     <div>
-      <Display value={'5'}/>
-      <Operations/>
-      <Numbers/>
-      <Equal/>
+      {componentsMap}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { runtimeReducer } from 'features/runtime';
 import thunk from 'redux-thunk';
 import { constructorReducer } from 'features/constructor';
 
-const rootReducer = combineReducers({ runtime: runtimeReducer, constructor: constructorReducer });
+const rootReducer = combineReducers({ runtime: runtimeReducer, constructorComponents: constructorReducer });
 
 export type RootStateType = ReturnType<typeof rootReducer>
 

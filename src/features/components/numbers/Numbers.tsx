@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Area } from 'common/components/area';
 import { Button } from 'common/components/button';
 
+import { ComponentType } from 'common/types';
+
 import s from './Numbers.module.css';
 
-export const Numbers = () => {
+export const Numbers:FC<ComponentType> = ({draggable}) => {
   return (
-    <Area draggable={true}>
+    <Area draggable={draggable}>
       <Button className={s.number}>7</Button>
       <Button className={s.number}>8</Button>
       <Button className={s.number}>9</Button>

@@ -9,7 +9,7 @@ type Props = {
 export const Display: FC<Props> = ({ value = 0 }) => {
   return (
     <div className={s.display}>
-      <input className={s.input} value={value} type="text" />
+      <input className={s.input} value={value} onChange={() => {}} type="text" />
     </div>
   );
 };

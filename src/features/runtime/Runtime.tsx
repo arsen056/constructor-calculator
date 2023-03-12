@@ -10,13 +10,11 @@ export const Runtime = () => {
 
   return (
     <div className={s.runtime}>
-      {runtimeComponents.map( c => {
-        const Component = c.component();
+      {runtimeComponents.length ? runtimeComponents.map( c => {
+        const Component = c.component;
 
-        return <Component/>;
-      } )}
-
-
+        return <Component key={c.id}/> ;
+      } ) : ''}
     </div>
   );
 };

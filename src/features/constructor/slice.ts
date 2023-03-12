@@ -5,10 +5,10 @@ import { Numbers } from 'features/components/numbers';
 import { Equal } from 'features/components/equal';
 
 const initialState = [
-  {order: 1, component: () => Display},
-  {order: 2, component: () => Operations},
-  {order: 3, component: () => Numbers},
-  {order: 4, component: () => Equal}
+  {id: 1, order: 1, component: Display},
+  {id: 2, order: 2, component: Operations},
+  {id: 3, order: 3, component: Numbers},
+  {id: 4, order: 4, component: Equal}
 ];
 
 const slice = createSlice({
