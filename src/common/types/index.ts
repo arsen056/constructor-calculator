@@ -1,3 +1,3 @@
-export type ComponentType = {
-  draggable: boolean
-}
+import { ComponentProps } from 'react';
+
+export type ComponentType = ComponentProps<'div'>

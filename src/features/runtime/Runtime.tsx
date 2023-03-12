@@ -8,8 +8,21 @@ import s from './Runtime.module.css';
 export const Runtime = () => {
   const runtimeComponents = useSelector(selectRuntimeComponents);
 
+  const dragOver = (e: any) => {
+    e.preventDefault();
+
+  };
+
+  const drop = (e: any) => {
+    e.preventDefault();
+
+  };
+
   return (
-    <div className={s.runtime}>
+    <div
+      onDragOver={(e) => dragOver(e)}
+      onDrop={(e) => drop(e)}
+      className={s.runtime}>
       {runtimeComponents.length ? runtimeComponents.map( c => {
         const Component = c.component;
 

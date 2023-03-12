@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type ComponentType = {
+export type ComponentType = {
   id: number,
   order: number,
   component: () => JSX.Element

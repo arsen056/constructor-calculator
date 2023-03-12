@@ -3,9 +3,9 @@ import { Area } from 'common/components/area';
 import { Button } from 'common/components/button';
 import { ComponentType } from 'common/types';
 
-export const Operations:FC<ComponentType> = ({draggable}) => {
+export const Operations:FC<ComponentType> = ({...rest}) => {
   return (
-    <Area draggable={draggable}>
+    <Area {...rest}>
       <Button>/</Button>
       <Button>*</Button>
       <Button>-</Button>

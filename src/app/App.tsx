@@ -3,7 +3,7 @@ import { Runtime } from 'features/runtime';
 
 function App() {
   return (
-    <div className="container">
+    <div draggable={true} className="container">
       <Constructor />
       <Runtime />
     </div>

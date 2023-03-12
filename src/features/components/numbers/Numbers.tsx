@@ -6,9 +6,9 @@ import { ComponentType } from 'common/types';
 
 import s from './Numbers.module.css';
 
-export const Numbers:FC<ComponentType> = ({draggable}) => {
+export const Numbers:FC<ComponentType> = ({...rest}) => {
   return (
-    <Area draggable={draggable}>
+    <Area {...rest}>
       <Button className={s.number}>7</Button>
       <Button className={s.number}>8</Button>
       <Button className={s.number}>9</Button>
